@@ -11,7 +11,7 @@ dotnet add package EnumeratorExtended
 ### Usage
 
 ```cs
-// On int type
+// Only on 'int' type.
 foreach (var item in 10) // 0 to 10
 foreach (var item in -10) // -10 to 0
 
@@ -21,9 +21,10 @@ foreach (var item in (from: 4, to: 10))
 foreach (var x in (4, 10, 2)) // (from, to, step)
 foreach (var x in (from: 4, to: 10, step: 2))
 
-// Values of a Tuple
+// Loop on values of a tuple
+// The type of 'item' is 'object'.
 var numbers = (1, 2, 3.0f, 4.0f, 5.0, 6.0, "7");
-foreach (var item in numbers) // 1, 2, 3.0f, 4.0f, 5.0, 6.0, "7"
+foreach (var item in numbers) // 1, 2, 3.0, 4.0, 5.0, 6.0, 7
 
 // Range 
 // Available on '.NETStandard 2.1' only.
