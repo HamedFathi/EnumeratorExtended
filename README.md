@@ -1,15 +1,11 @@
+![steps](https://user-images.githubusercontent.com/8418700/141453907-33af8015-a3ad-4f32-b5ae-992b98aa098b.png)
 
-
-
-
-
-
-This package enables new capabilities on `Enumerators` as follows:
-
-### [Nuget]()
+### [Nuget](https://www.nuget.org/packages/EnumeratorExtended)
 
 ```
+Install-Package EnumeratorExtended
 
+dotnet add package EnumeratorExtended
 ```
 
 ### Usage
@@ -32,3 +28,7 @@ foreach (var x in 1..10)
 ```
 
 **Attention:** All extensions are implemented inside `global` namespace it means you don't need to `using` any namespaces, these features add to you project just by installing.
+
+<hr/>
+<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
