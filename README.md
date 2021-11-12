@@ -27,6 +27,7 @@ foreach (var x in (4, 10, 2)) // (from, to, step)
 foreach (var x in (from: 4, to: 10, step: 2))
 
 // Range
+// Available on '.NETStandard 2.1' only.
 foreach (var x in 1..10)
 ```
 
