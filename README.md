@@ -11,23 +11,28 @@ dotnet add package EnumeratorExtended
 ### Usage
 
 ```cs
-// int
+// On int type
 foreach (var item in 10) // 0 to 10
 foreach (var item in -10) // -10 to 0
 
-// Tuple
 foreach (var item in (4, 10)) // (from, to)
 foreach (var item in (from: 4, to: 10))
 
 foreach (var x in (4, 10, 2)) // (from, to, step)
 foreach (var x in (from: 4, to: 10, step: 2))
 
-// Range
+// Values of a Tuple
+var numbers = (1, 2, 3.0f, 4.0f, 5.0, 6.0, "7");
+foreach (var item in numbers) // 1, 2, 3.0f, 4.0f, 5.0, 6.0, "7"
+
+// Range 
 // Available on '.NETStandard 2.1' only.
-foreach (var x in 1..10)
+foreach (var x in 1..10) // 1 to 10
 ```
 
-**Attention:** All extensions are implemented inside `global` namespace it means you don't need to `using` any namespaces, these features add to you project just by installing.
+* This feature ([Extension GetEnumerator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-9.0/extension-getenumerator)) only available on `C# 9.0` and above.
+
+* All extensions are implemented inside `global` namespace it means you don't need to `using` any namespaces, these features add to you project just by installing.
 
 <hr/>
 <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
