@@ -2,6 +2,10 @@
 
 ### [Nuget](https://www.nuget.org/packages/EnumeratorExtended)
 
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://opensource.org/licenses/MIT)
+![Nuget](https://img.shields.io/nuget/v/EnumeratorExtended)
+![Nuget](https://img.shields.io/nuget/dt/EnumeratorExtended)
+
 ```
 Install-Package EnumeratorExtended
 
