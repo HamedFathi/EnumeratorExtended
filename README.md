@@ -15,7 +15,7 @@ dotnet add package EnumeratorExtended
 ### Usage
 
 ```cs
-// Only on 'int' type.
+// Only available on 'int' type.
 foreach (var item in 10) // 0 to 10
 foreach (var item in -10) // -10 to 0
 
