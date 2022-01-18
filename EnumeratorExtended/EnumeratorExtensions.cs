@@ -8,16 +8,16 @@ public static class EnumeratorExtensions
     {
         if (input >= 0)
         {
-            for (int i = 0; i < input; i++)
+            for (int i = 0; i <= input; i++)
             {
                 yield return i;
             }
         }
         else
         {
-            for (int i = (-input) - 1; i >= 0; i--)
+            for (int i = input; i <= 0; i++)
             {
-                yield return -i;
+                yield return i;
             }
         }
     }
