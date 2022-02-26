@@ -1,35 +1,28 @@
-﻿#if NETSTANDARD2_1
+﻿#if NETSTANDARD2_1_OR_GREATER
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
 
 [EditorBrowsable(EditorBrowsableState.Never)]
 public static class RangeExtensions
 {
-    public struct RangeEnumerator
+    public static IEnumerator<int> GetEnumerator(this Range range)
     {
-        public RangeEnumerator(int start, int end) => (Current, _end) = (start - 1, end);
-
-        public int Current { get; private set; }
-        private readonly int _end;
-
-        public bool MoveNext() => ++Current < _end;
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static RangeEnumerator GetEnumerator(this System.Range range)
-    {
-        if (range.Start.IsFromEnd || range.End.IsFromEnd)
-            ThrowIsFromEnd();
-
-        if (range.Start.Value > range.End.Value)
-            ThrowStartIsGreaterThanEnd();
-
-        return new RangeEnumerator(range.Start.Value, range.End.Value);
-
-        static void ThrowIsFromEnd() => throw new ArgumentException("range start and end must not be from end");
-        static void ThrowStartIsGreaterThanEnd() => throw new ArgumentException("start is greater than end");
+        if (range.Start.IsFromEnd)
+        {
+            for (int i = range.Start.Value; i >= range.End.Value; i--)
+            {
+                yield return i;
+            }
+        }
+        else
+        {
+            for (int i = range.Start.Value; i <= range.End.Value; i++)
+            {
+                yield return i;
+            }
+        }
     }
 }
 #endif

@@ -32,7 +32,9 @@ foreach (var item in numbers) // 1, 2, 3.0, 4.0, 5.0, 6.0, 7
 
 // Range 
 // Available on '.NETStandard 2.1' only.
-foreach (var x in 1..10) // 1 to 10
+foreach (int x in 1..10) // 1 to 10
+foreach (int x in ..10) // 0 to 10
+foreach (int x in ^10..) // 10 to 0
 ```
 
 * This feature ([Extension GetEnumerator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-9.0/extension-getenumerator)) only available on `C# 9.0` and above.
